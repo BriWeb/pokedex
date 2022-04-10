@@ -76,7 +76,7 @@ const success = async ({results: pokemons, next}) => {
 //SCROLL INFINITO
 window.addEventListener("scroll", e => {
   let { clientHeight, scrollHeight, scrollTop} = document.documentElement;
-  console.log(scrollTop + clientHeight + 10000, scrollHeight)
+  console.log(scrollTop + clientHeight + 100, scrollHeight)
   if(scrollTop + clientHeight >= scrollHeight){
     // console.log("cargar más pokemons", endpoint);
     if(!end){
