@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Busca el pokemon que quieras.">
+  <meta name="keywords" content="Brian, practica4, pokemon, pokedex">
+  <script src="https://kit.fontawesome.com/ed4a3d03cf.js" crossorigin="anonymous"></script>
+  <!-- YANONE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Yanone+Kaffeesatz&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="icon" href="./assets/images/favicon.png"> -->
+  <link rel="icon" href="./assets/images/favi-ball.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pokédex</title>
+</head>
+
+<body>
+  <nav>
+    <div class="form-container">
+      <img class="form__logo" src="./assets/images/pokemon-logo.png" alt="Pokemon">
+      <form class="form">
+        <input class="form__input" type="search" name="name" placeholder="Busca un pokémon.." required
+          autocomplete="off" title="Escribe tu pokémon favorito">
+        <input type="submit" class="form__submit" title="Buscar" value="">
+      </form>
+      <p class="pokemon__error none">Pokémon no encontrado</p>
+    </div>
+  </nav>
+  <img src="./assets/images/loader-pikachu.gif" alt="Cargando.." class="nav__loader none">
+  <div class="modal none">
+    <div class="modal__poke-container">
+      <button class="modal__close">x</button>
+      <h5 class="modal__poke-name"></h5>
+      <img class="modal__poke-img">
+      <ul class="modal__poke-types"></ul>
+      <div class="modal__poke-skills"></div>
+    </div>
+  </div>
+  <main>
+    <div class="pokemon-list"></div>
+    <img src="./assets/images/pokemon-pokeball.gif" alt="Cargando.." class="pokemon-list__loader none">
+    <p class="pokemons__error none">Error al buscar los Pókemons</p>
+    <template id="template-pokemon">
+      <div class="pokemon">
+        <p class="pokemon__name"></p>
+        <img class="pokemon__img">
+      </div>
+    </template>
+  </main>
+  <script src="./scripts.js" type="module"></script>
+</body>
+
+</html>
